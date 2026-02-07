@@ -1,0 +1,20 @@
+.navbar-container{
+    display: flex;
+    background-color:cornflowerblue;
+    border-radius: 6px;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.links{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    margin-left: 50px;
+}
+.userSection{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
