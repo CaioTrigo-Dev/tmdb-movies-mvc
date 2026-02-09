@@ -1,7 +1,6 @@
 import { createContext, useState } from "react";
 
-
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
 export default function AuthProvider({children}){
     const [user, setUser] = useState(null);
@@ -10,6 +9,7 @@ export default function AuthProvider({children}){
         if(username === 'admin' && password === 'admin'){
             setUser('Administrador');
         }
+        console.log(username, password);
     }
     function logout(){
         setUser(null);
