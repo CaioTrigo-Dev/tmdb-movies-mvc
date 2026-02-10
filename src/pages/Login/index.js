@@ -2,7 +2,7 @@ import '../../assets/login.css';
 import { UseLoginController } from '../../controllers/useLoginController';
 
 export default function Login(){
-    const {userName, setUserName, password, setPassword, handleLogin} = UseLoginController(); 
+    const {userName, setUserName, password, setPassword, handleLogin, stateView} = UseLoginController(); 
     return(
         <main className='main-container'>
             <header className="header-container">
@@ -15,6 +15,9 @@ export default function Login(){
                     <input value={password} onChange={(e)=> setPassword(e.target.value)} type='password'></input>
 
                     <button type='submit'>Entrar</button>
+                    <div>
+                        <span>{stateView}</span>
+                    </div>
                 </form>
             </header>
         </main>
