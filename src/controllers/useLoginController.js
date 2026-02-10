@@ -5,24 +5,24 @@ export function UseLoginController(){
     const { login } = useContext(AuthContext);
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
+    const [stateView,  setStateView] = useState('');
     function handleLogin(e){
         e.preventDefault();
-        try{
-            if(userName && password){
-                login(userName, password);
+            const result = login(userName, password);
+            if(result === 'Senha Incorreta'){
+                setStateView(result);
             }
-            else{
-                throw new Error('Deu Merda');
+            else if(result === true){
+                setStateView('Carregando');
             }
-        }catch(err){
-            console.log(err.message)
-        }
     }
     return{
         userName,
         setUserName,
         password,
         setPassword,
-        handleLogin
+        handleLogin,
+        stateView,
+        setStateView
     }
 }
