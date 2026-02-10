@@ -8,19 +8,19 @@ export default function AuthProvider({children}){
         const storageUser = localStorage.getItem('@CineMark:user');
 
         if(storageUser){
-            setUser(JSON.parse(storageUser));
+            setUser(storageUser.replace(/['"]/g, ''));
         }
     }, [])
     function login(username, password){
         try{
             if(username === 'admin' && password === 'admin'){
                 setUser('Administrador');
-                localStorage.setItem('@CineMark:user', 'Administrador');
+                localStorage.setItem('@CineMark:user', JSON.stringify('Administrador'));
                 return true;
             }
             else if(username === 'caio' && password === '12345'){
                 setUser('Caio');
-                localStorage.setItem('@CineMark:user', 'Caio');
+                localStorage.setItem('@CineMark:user', JSON.stringify('Caio'));
                 return true;
             }
             else{
