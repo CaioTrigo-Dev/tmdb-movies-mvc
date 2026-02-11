@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+🎬 CineMark - Catálogo de Filmes
+O CineMark é uma aplicação React desenvolvida para listar e gerenciar filmes utilizando a API do TMDB. O projeto foi estruturado utilizando a arquitetura MVC (Model-View-Controller) para garantir uma separação clara de responsabilidades e facilitar a manutenção e testes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Tecnologias Utilizadas
+React JS: Biblioteca principal para construção da interface.
 
-## Available Scripts
+Context API: Gerenciamento de estado global para autenticação e sessão do usuário.
 
-In the project directory, you can run:
+React Router Dom: Controle de rotas públicas e privadas.
 
-### `npm start`
+Axios: Consumo da API REST do TMDB.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+LocalStorage: Persistência de dados do usuário no navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+CSS Moderno: Layout responsivo com Flexbox e Grid.
 
-### `npm test`
+🏗️ Arquitetura MVC
+A estrutura de pastas reflete a preocupação com a organização do projeto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+src/context (Model): Contém o AuthContext, responsável por gerenciar o estado da verdade da aplicação (usuário logado).
 
-### `npm run build`
+src/pages (View): Telas da aplicação (Login, Dashboard) que apenas exibem os dados fornecidos pelos controllers.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+src/controllers (Controller): Custom Hooks que isolam toda a lógica de negócio e validações, servindo de ponte entre o Context/Service e a View.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+src/services: Configurações de API (Axios) e funções de busca de dados.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🔐 Funcionalidades Implementadas
+Autenticação: Sistema de login com validação de credenciais e mensagens de erro.
 
-### `npm run eject`
+Rotas Protegidas: Bloqueio de acesso ao Dashboard para usuários não autenticados.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Persistência: O usuário permanece logado mesmo após atualizar a página (Refresh) graças ao LocalStorage.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Consumo de API: Integração com a API do TMDB para listar filmes populares.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🛠️ Como rodar o projeto
+Clone o repositório.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Instale as dependências: npm install.
 
-## Learn More
+Crie um arquivo .env na raiz do projeto e adicione sua chave do TMDB:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Plaintext
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+REACT_APP_TMDB_KEY=SUA_CHAVE_AQUI
+Inicie a aplicação: npm start.
