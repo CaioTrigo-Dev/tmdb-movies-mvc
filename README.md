@@ -44,4 +44,4 @@ Crie um arquivo .env na raiz do projeto e adicione sua chave do TMDB:
 Plaintext
 
 REACT_APP_TMDB_KEY=SUA_CHAVE_AQUI
-Inicie a aplicação: npm start.
+Inicie a aplicação: npm start..
