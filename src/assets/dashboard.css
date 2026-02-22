@@ -6,9 +6,10 @@
     min-height: 100vh;
     background-color: #121212;
 }
-.movies-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 25px;
-    justify-items: center;
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  justify-items: center;
 }
