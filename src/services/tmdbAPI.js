@@ -10,7 +10,7 @@ const api = axios.create({
 
 export const getPopularMovies = async ()=>{
     const response = await api.get('/movie/popular');
-    return response.data.results;
+    return response.data;
 }
 
 export default api;
