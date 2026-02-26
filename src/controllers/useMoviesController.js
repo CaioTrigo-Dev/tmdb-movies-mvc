@@ -5,6 +5,7 @@ export default function useMoviesController(){
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
     useEffect(()=>{
         const fetchMovies = async ()=>{
             try{

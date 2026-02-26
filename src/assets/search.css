@@ -1,0 +1,26 @@
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    color: #888;
+}
+
+.search-container input {
+    padding-left: 35px; 
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}

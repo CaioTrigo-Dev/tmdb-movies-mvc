@@ -6,6 +6,8 @@ export default function MovieCard({movie}){
 
     const { checkIsFavorite, handleFavoriteToggle} = useFavoriteController();
     const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
+
+    
     return(
         <div className="movie-card">
             <img 
