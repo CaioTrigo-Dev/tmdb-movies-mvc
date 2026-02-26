@@ -11,7 +11,6 @@ export default function useMoviesController(){
                 setLoading(true);
 
                 const data = await getPopularMovies();
-                console.log(data)
                 setMovies(data.results || []);
 
             }catch(err){

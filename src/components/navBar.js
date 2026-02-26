@@ -13,7 +13,7 @@ export default function NavBar(){
                 <Link to="/dashboard" className='nav-item'>
                     <span>Home</span>
                 </Link>
-                <Link to="/favorite" className='nav-item'>
+                <Link to="/favorites" className='nav-item'>
                     <span>Favoritos</span>
                 </Link>
             </div>
