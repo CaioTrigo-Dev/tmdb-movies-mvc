@@ -11,8 +11,7 @@ export default function Dashboard(){
     const {movies, loading, error} = useMoviesController();
     const {search, setSearch, isSearch, filterMovies} = useSearchController(movies);
 
-    const moviesToShow = isSearch ? filterMovies : movies
-    console.log(moviesToShow);
+    const moviesToShow = isSearch ? filterMovies : movies;
     return(
         <main className="main-dashboard">
             <NavBar/>
