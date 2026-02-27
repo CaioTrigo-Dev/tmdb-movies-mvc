@@ -5,6 +5,7 @@ import Dashboard from "../pages/Dashboard";
 import Favorites from "../pages/Favorites";
 
 import Private from "./Private";
+import Details from "../pages/MovieDetails";
 
 export default function AppRouter(){
     return(
@@ -27,7 +28,14 @@ export default function AppRouter(){
                 </Private>
             }/>
 
-            
+            <Route
+            path="/details/:id"
+            element={
+                <Private>
+                    <Details/>
+                </Private>
+            }
+            />
         </Routes>
 
 
