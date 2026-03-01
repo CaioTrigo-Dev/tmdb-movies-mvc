@@ -8,7 +8,6 @@ export default function useDetailsController({id}){
     
 
     const detailsMovie = movies.filter(movie => movie.id === NumberID);
-    console.log(detailsMovie);
     return{
         detailsMovie
     }
