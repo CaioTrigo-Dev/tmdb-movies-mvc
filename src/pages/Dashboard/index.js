@@ -7,8 +7,7 @@ import Search from "../../components/Search";
 import useSearchController from "../../controllers/useSearchController";
 
 export default function Dashboard(){
-
-    const {movies, loading, error} = useMoviesController();
+    const {movies, loading, error, total_Pages, prevPage, nextPage, currentPage} = useMoviesController();
     const {search, setSearch, isSearch, filterMovies} = useSearchController(movies);
 
     const moviesToShow = isSearch ? filterMovies : movies;
@@ -27,6 +26,19 @@ export default function Dashboard(){
                     ) : (
                         <p className="no-results">Nenhum filme encontrado para "{search}"</p>
                     )}
+                </div>
+                <div className="moviePagination-container">
+                    {currentPage === 1 ? '' : <button 
+                    onClick={prevPage}
+                    className="btn-prev"
+                    >Anterior</button>}
+                    <div className="pagination">
+                        {`Página ${currentPage} de ${total_Pages}`}
+                    </div>
+                    {currentPage === total_Pages ? '' : <button 
+                    onClick={nextPage} 
+                    className="btn-next"
+                    >Próximo</button>}
                 </div>
             </div>
         </main>

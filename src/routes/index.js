@@ -13,13 +13,13 @@ export default function AppRouter(){
             <Route path="/" element={<Login/>}/>
 
             <Route
-            path="/dashboard"
+            path="/dashboard/"
             element={
                 <Private>
                     <Dashboard />
                 </Private>
             }/>
-
+            
             <Route
             path="/favorites"
             element={
