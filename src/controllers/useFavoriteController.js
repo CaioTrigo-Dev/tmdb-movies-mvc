@@ -35,6 +35,7 @@ import { useState,useEffect } from "react";
             myFavorites,
             checkIsFavorite,
             handleFavoriteToggle,
-            removeFavorite
+            removeFavorite,
+            addFavorite
         }
     }
