@@ -5,14 +5,14 @@ export default function MovieDetails({detailsMovie}) {
 
     const imageBaseUrl = "https://image.tmdb.org/t/p/original";
     const posterBaseUrl = "https://image.tmdb.org/t/p/w500";
-
     return (
         <div className="details-container">
             {detailsMovie.map((movie)=>(
                 <div 
                     className="backdrop-container" 
                     style={{ backgroundImage: `url(${imageBaseUrl}${movie.backdrop_path})` }}
-                >
+                    key={movie.id}
+                    >
                     <div className="backdrop-overlay">
                         <Link 
                     to="/dashboard" 
@@ -24,7 +24,10 @@ export default function MovieDetails({detailsMovie}) {
             ))}
 
             {detailsMovie.map((movie)=> (
-                <div className="details-content">
+                <div 
+                className="details-content"
+                key={movie.id}
+                >
                     <div className="poster-wrapper">
                         <img 
                             src={`${posterBaseUrl}${movie.poster_path}`} 

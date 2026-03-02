@@ -7,12 +7,11 @@ export default function Details(){
 
     const id = useParams();
     const {detailsMovie} = useDetailsController(id);
-
     return(
         <main>
             <NavBar/>
                 <div className="dashboard-container">
-                    <MovieDetails detailsMovie={detailsMovie}/>
+                    <MovieDetails detailsMovie={detailsMovie} />
                 </div>
         </main>
     )

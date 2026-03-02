@@ -6,7 +6,6 @@ export default function useDetailsController({id}){
     const NumberID= Number(id);
     const {movies} = useMoviesController();
     
-
     const detailsMovie = movies.filter(movie => movie.id === NumberID);
     return{
         detailsMovie

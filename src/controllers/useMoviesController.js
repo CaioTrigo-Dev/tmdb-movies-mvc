@@ -39,5 +39,13 @@ export default function useMoviesController(){
             setCurrentPage(prev => prev - 1);
         }
     }
-    return{movies, loading, error, currentPage, total_Pages, prevPage, nextPage};
+    return{
+        movies, 
+        loading, 
+        error, 
+        currentPage, 
+        total_Pages, 
+        prevPage, 
+        nextPage
+    };
 }
