@@ -40,7 +40,10 @@ export default function useMoviesController(){
         }
     }
     return{
-        movies, 
+        movies,
+        setLoading,
+        setError,
+        setMovies,
         loading, 
         error, 
         currentPage, 
